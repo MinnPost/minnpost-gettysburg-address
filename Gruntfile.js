@@ -244,11 +244,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-s3');
 
   // Default build task
-  grunt.registerTask('default', ['jshint', 'compass:dev', 'compass:dist', 'clean', 'copy', 'requirejs', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'compass:dist', 'clean', 'copy', 'requirejs', 'concat', 'uglify']);
 
   // Watch tasks
   grunt.registerTask('watcher', ['jshint', 'compass:dev']);
-  grunt.registerTask('server', ['connect', 'watch']);
+  grunt.registerTask('server', ['compass:dev', 'connect', 'watch']);
 
   // Deploy tasks
   grunt.registerTask('deploy', ['s3']);
