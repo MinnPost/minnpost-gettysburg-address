@@ -1,18 +1,14 @@
 # Minnpost Gettysburg Address
 
-A fill in the blank version of the Gettysburg Address
+A fill in the blank version of the Gettysburg Address.
 
 ## Data
 
-*Describe the data sources here.  Use links and URLs to show where the data came from.  Put small sized originals or modified data sources in the ```data``` folder*
-
-*For larger data sources that may need to be processed, provide instructions on how to download.  For instance:  ```cd data && wget blah.txt```.  Also, make sure to put an entry in the ```.gitignore```.*
+Gettysburg Address text taken from [abrahamlincolnonline.org](http://www.abrahamlincolnonline.org/lincoln/speeches/gettysburg.htm), cited source of *Collected Works of Abraham Lincoln*, edited by Roy P. Basler.
 
 ## Data processing
 
-The following describes how the data was processed and is not necessarily needed to run or install the application, but more included for reference, transparency, and development.
-
-*Describe data processing here, include commands.  Put data processing scripts or configurations in the ```data-processing``` folder.*
+No data processing was used in this project.  There was manual choosing of words to use for blanks.
 
 ## Development and running locally
 
@@ -28,12 +24,10 @@ All commands are assumed to on the [command line](http://en.wikipedia.org/wiki/C
 1. Install [Bower](http://bower.io/): `npm install -g bower`
 1. Install [Ruby](http://www.ruby-lang.org/en/downloads/), though it is probably already installed on your system.
 1. Install [Bundler](http://gembundler.com/): `gem install bundler`
-
 1. Install [Sass](http://sass-lang.com/): `gem install sass`
    * On a Mac do: `sudo gem install sass`
 1. Install [Compass](http://compass-style.org/): `gem install compass`
    * On a Mac do: `sudo gem install compass`
-
 
 ### Get code and install packages
 
@@ -43,9 +37,6 @@ Get the code for this project and install the necessary dependency libraries and
 1. Go into the template directory: `cd minnpost-gettysburg-address`
 1. Install NodeJS packages: `npm install`
 1. Install Bower components: `bower install`
-
-
-
 
 ### Running
 
@@ -69,4 +60,4 @@ Deploying will push the relevant files up to Amazon's AWS S3 so that they can be
 
 ## Hacks
 
-*List any hacks used in this project, such as forked repos.  Link to pull request or repo and issue.*
+No hacks used (yet)
