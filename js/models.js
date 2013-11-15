@@ -30,13 +30,17 @@ define('models', ['underscore', 'Backbone', 'helpers'],
       data.options = _.sample(data.options, data.options.length);
       this.set('options', data.options);
 
-      // When answer updated, check if it is correct
-      this.on('change:answer', function() {
-        this.set('correct', false);
-        if (this.get('answer') === this.get('word')) {
-          this.set('correct', true);
-        }
-      });
+      // Grade now and when answer updated
+      this.grade();
+      this.on('change:answer', this.grade);
+    },
+
+    // Check if correct
+    grade: function() {
+      this.set('correct', false);
+      if (this.get('answer') === this.get('word')) {
+        this.set('correct', true);
+      }
     }
   });
 

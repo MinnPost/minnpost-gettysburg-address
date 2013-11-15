@@ -10,7 +10,12 @@ module.exports = function(grunt) {
 
   // Maintain list of libraries here.  Order matters for build
   // processing
-  var components = {"requirejs":{"rname":"requirejs","js":["requirejs/require"]},"text":{"rname":"text","js":["text/text"]},"jquery":{"rname":"jquery","js":["jquery/jquery.min"]},"underscore":{"rname":"underscore","js":["underscore/underscore-min"]},"backbone":{"rname":"Backbone","js":["backbone/backbone-min"]},"ractive":{"rname":"Ractive","js":["ractive/build/Ractive-legacy.min"]},"ractive-backbone":{"rname":"Ractive-Backbone","js":["ractive-backbone/Ractive-Backbone.min"]},"unsemantic":{"css":["unsemantic/assets/stylesheets/unsemantic-grid-responsive-tablet"],"ie":["unsemantic/assets/stylesheets/ie"],"rname":"unsemantic"}};
+  var components = {"requirejs":{"rname":"requirejs","js":["requirejs/require"]},"text":{"rname":"text","js":["text/text"]},"jquery":{"rname":"jquery","js":["jquery/jquery.min"]},"underscore":{"rname":"underscore","js":["underscore/underscore-min"]},"backbone":{"rname":"Backbone","js":["backbone/backbone-min"]},"ractive":{"rname":"Ractive","js":["ractive/build/Ractive-legacy.min"]},"ractive-backbone":{"rname":"Ractive-Backbone","js":["ractive-backbone/Ractive-Backbone.min"]},"unsemantic":{"css":["unsemantic/assets/stylesheets/unsemantic-grid-responsive-tablet"],"ie":["unsemantic/assets/stylesheets/ie"],"rname":"unsemantic"},
+    "store.js": {
+      "rname": "store",
+      "js": ['store.js/store+json2.min']
+    }
+  };
 
   // Project configuration.  Most of this is directly read from
   // package.json.

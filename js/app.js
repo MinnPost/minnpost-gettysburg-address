@@ -4,8 +4,8 @@
  * This pulls in all the parts
  * and creates the main object for the application.
  */
-define('minnpost-gettysburg-address', ['underscore', 'helpers', 'routers'],
-  function(_, helpers, routers) {
+define('minnpost-gettysburg-address', ['underscore', 'store', 'helpers', 'routers'],
+  function(_, store, helpers, routers) {
 
   // Word data, embedded here for ease of use
   var words = [
@@ -98,8 +98,31 @@ define('minnpost-gettysburg-address', ['underscore', 'helpers', 'routers'],
   // Extend with helpers
   _.extend(App.prototype, helpers);
 
+  // Add other methods
+  _.extend(App.prototype, {
+    store: store,
+    setStorage: function(value) {
+      return store.set('minnpost-gettysburg-address', value);
+    },
+    getStorage: function() {
+      return store.get('minnpost-gettysburg-address');
+    },
+    clearStorage: function() {
+      store.remove('minnpost-gettysburg-address');
+    }
+  });
+
   // Start function
   App.prototype.start = function() {
+    // Match up words data with answer data
+    var answers = this.getStorage();
+    words = _.map(words, function(w) {
+      if (answers && answers[w.id]) {
+        w.answer = answers[w.id];
+      }
+      return w;
+    });
+
     // Create router
     this.router = new routers.Router({
       app: this,

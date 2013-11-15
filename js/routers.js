@@ -35,7 +35,8 @@ define('routers', [
         el: this.app.$el,
         template: tApplication,
         data: {
-          words: this.data.words
+          words: this.data.words,
+          storage: this.app.store.enabled
         },
         router: this,
         partials: {

@@ -13,6 +13,13 @@ define('views', ['underscore', 'Ractive', 'helpers'],
   views.Base = Ractive.extend({
     baseInit: function(options) {
       this.router = options.router;
+      this.app = this.router.app;
+
+      // Clear local storage
+      this.on('clearStorage', function(e) {
+        e.original.preventDefault();
+        this.app.clearStorage();
+      });
     }
   });
 
@@ -24,11 +31,19 @@ define('views', ['underscore', 'Ractive', 'helpers'],
       // Watch for any changes to the words and count correctness
       this.observe('words', function(nV, oV) {
         var words = this.get('words');
+        var answers = {};
 
+        // Update word counts
         this.set('wordCount', _.size(words));
         this.set('correctCount', _.reduce(words, function(total, w) {
           return total + (w.get('correct') ? 1 : 0);
         }, 0));
+
+        // Save answer set
+        _.each(words, function(w) {
+          answers[w.id] = w.get('answer');
+        });
+        this.app.setStorage(answers);
       });
     }
   });
