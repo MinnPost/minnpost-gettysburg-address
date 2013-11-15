@@ -80,6 +80,9 @@ body .node-unpublished {
   }
 
   .address-text {
+    max-width: 34em;
+    text-align: justify;
+    margin: 0 auto;
     font-size: 1.5em;
     line-height: 1.5em;
   }

@@ -30,6 +30,11 @@ define('minnpost-gettysburg-address', ['underscore', 'helpers', 'routers'],
       options: ['country', 'notion', 'truth']
     },
     {
+      id: 'proper',
+      word: 'proper',
+      options: ['necessary', 'good', 'essential']
+    },
+    {
       id: 'consecrate',
       word: 'consecrate',
       options: ['preserve', 'commemorate', 'anoint']
