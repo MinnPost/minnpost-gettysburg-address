@@ -5,37 +5,49 @@ define('routers', [
   'underscore', 'Backbone', 'Ractive', 'Ractive-Backbone',
   'helpers', 'models', 'collections', 'views',
   'text!templates/application.mustache',
-  'text!templates/loading.mustache'
+  'text!templates/loading.mustache',
+  'text!templates/word.mustache'
 ], function(_, Backbone, Ractive, RactiveBackbone,
     helpers, models, collections, views,
-    tApplication, tLoading) {
+    tApplication, tLoading, tWord) {
   var routers = {};
 
   // Base model
   routers.Router = Backbone.Router.extend({
     views: {},
+    collections: {},
+    models: {},
+    data: {},
 
     initialize: function(options) {
       this.options = options;
       this.app = options.app;
+
+      // Create data object.  We don't use a collection as it makes
+      // it much easier to refer to words by the Id
+      this.data.words = {};
+      _.each(options.words, function(w) {
+        this.data.words[w.id] = new models.Word(w);
+      }.bind(this));
 
       // Create application view
       this.views.application = new views.Application({
         el: this.app.$el,
         template: tApplication,
         data: {
-
+          words: this.data.words
         },
         router: this,
         partials: {
-          loading: tLoading
+          loading: tLoading,
+          word: tWord
         },
         adaptors: [ 'Backbone' ]
       });
     },
 
     routes: {
-      'routeOne': 'routeOne',
+      'addressQuiz': 'routeAddressQuiz',
       '*default': 'routeDefault'
     },
 
@@ -44,11 +56,11 @@ define('routers', [
     },
 
     routeDefault: function() {
-      this.navigate('/routeOne', { trigger: true, replace: true });
+      this.navigate('/addressQuiz', { trigger: true, replace: true });
     },
 
-    routeRouteOne: function() {
-      // this is just a placeholder for a route
+    routeAddressQuiz: function() {
+      // Handle quiz
     }
   });
 

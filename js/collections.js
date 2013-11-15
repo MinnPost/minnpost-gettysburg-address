@@ -23,6 +23,16 @@ define('collections', ['underscore', 'Backbone', 'helpers', 'models'],
 
   });
 
+  // Words
+  collections.Words = collections.Base.extend({
+    model: models.Word,
+
+    initialize: function(models, options) {
+      collections.Words.__super__.initialize.apply(this, arguments);
+    }
+
+  });
+
   // Return what we have
   return collections;
 });

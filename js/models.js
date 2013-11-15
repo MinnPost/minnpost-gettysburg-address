@@ -16,11 +16,20 @@ define('models', ['underscore', 'Backbone', 'helpers'],
       // Attach options
       this.options = options || {};
       this.app = options.app;
-
-      // Call this in other models
-      //models.NEWModel.__super__.initialize.apply(this, arguments);
     }
 
+  });
+
+  // Word
+  models.Word = Backbone.Model.extend({
+    initialize: function(data, options) {
+      models.Word.__super__.initialize.apply(this, arguments);
+
+      // Add options together and randomize
+      data.options.push(data.word);
+      data.options = _.sample(data.options, data.options.length);
+      this.set('options', data.options);
+    }
   });
 
   // Return what we have

@@ -14,7 +14,6 @@ require.config({
   },
   baseUrl: 'js',
   paths: {
-    
     'requirejs': '../bower_components/requirejs/require',
     'text': '../bower_components/text/text',
     'jquery': '../bower_components/jquery/jquery.min',
