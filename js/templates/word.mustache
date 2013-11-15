@@ -1,6 +1,8 @@
-<select value="{{answer}}">
-  <option selected disabled>&nbsp;</option>
-  {{#options:i}}
-    <option value="{{.}}">{{.}}</option>
-  {{/options}}
-</select>
+<span class="{{#(typeof correct != 'undefined' && correct)}}correct{{/()}}{{#(typeof correct != 'undefined' && !correct)}}incorrect{{/()}}">
+  <select value="{{ .answer }}">
+    <option selected disabled>&nbsp;</option>
+    {{#options:i}}
+      <option value="{{.}}">{{.}}</option>
+    {{/options}}
+  </select>
+</span>

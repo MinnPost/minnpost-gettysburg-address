@@ -70,6 +70,19 @@ body .node-unpublished {
     }
   }
 
+  .correctness {
+    margin-bottom: 1em;
+    text-align: center;
+    font-family: $sans-serif-font;
+    font-size: 1.5em;
+    background-color: $color-lightest-gray;
+    padding: 1em;
+  }
+
+  .address-text {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
 
   // Unsemantic "Mobile" breakpoint
   @media screen and (max-width: 768px) {
