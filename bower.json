@@ -23,6 +23,7 @@
     "Placeholders.js": "~3.0.1",
     "requirejs": "~2.1.9",
     "text": "~2.0.10",
-    "store.js": "~1.3.14"
+    "store.js": "~1.3.14",
+    "easydropdown": "~2.1.3"
   }
 }

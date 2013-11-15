@@ -22,6 +22,7 @@ require.config({
     'Ractive': '../bower_components/ractive/build/Ractive-legacy.min',
     'Ractive-Backbone': '../bower_components/ractive-backbone/Ractive-Backbone.min',
     'store': '../bower_components/store.js/store+json2.min',
+    'easydropdown': '../bower_components/easydropdown/jquery.easydropdown.min',
     'minnpost-gettysburg-address': 'app'
   }
 });

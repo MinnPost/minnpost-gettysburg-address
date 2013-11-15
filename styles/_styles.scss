@@ -87,6 +87,15 @@ body .node-unpublished {
     line-height: 1.5em;
   }
 
+  div.dropdown {
+    @include inline-block();
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
   // Unsemantic "Mobile" breakpoint
   @media screen and (max-width: 768px) {
   }

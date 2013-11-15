@@ -1,6 +1,6 @@
 <span class="{{#(typeof correct != 'undefined' && correct)}}correct{{/()}}{{#(typeof correct != 'undefined' && !correct)}}incorrect{{/()}}">
-  <select value="{{ .answer }}">
-    <option selected disabled>&nbsp;</option>
+  <select value="{{ .answer }}" data-word-id="{{ id }}" class="dropdown">
+    <option class="label" selected disabled>&nbsp;</option>
     {{#options:i}}
       <option value="{{.}}">{{.}}</option>
     {{/options}}

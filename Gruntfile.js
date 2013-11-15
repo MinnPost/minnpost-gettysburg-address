@@ -13,7 +13,12 @@ module.exports = function(grunt) {
   var components = {"requirejs":{"rname":"requirejs","js":["requirejs/require"]},"text":{"rname":"text","js":["text/text"]},"jquery":{"rname":"jquery","js":["jquery/jquery.min"]},"underscore":{"rname":"underscore","js":["underscore/underscore-min"]},"backbone":{"rname":"Backbone","js":["backbone/backbone-min"]},"ractive":{"rname":"Ractive","js":["ractive/build/Ractive-legacy.min"]},"ractive-backbone":{"rname":"Ractive-Backbone","js":["ractive-backbone/Ractive-Backbone.min"]},"unsemantic":{"css":["unsemantic/assets/stylesheets/unsemantic-grid-responsive-tablet"],"ie":["unsemantic/assets/stylesheets/ie"],"rname":"unsemantic"},
     "store.js": {
       "rname": "store",
-      "js": ['store.js/store+json2.min']
+      "js": ["store.js/store+json2.min"]
+    },
+    "easydropdown": {
+      "rname": "easydropdown",
+      "js": ["easydropdown/jquery.easydropdown.min"],
+      "css": ["easydropdown/themes/easydropdown"]
     }
   };
 
