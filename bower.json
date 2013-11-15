@@ -1,0 +1,28 @@
+{
+  "name": "minnpost-gettysburg-address",
+  "version": "0.0.0",
+  "main": "index.html",
+  "homepage": "https://github.com/minnpost/minnpost-gettysburg-address",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minnpost/minnpost-gettysburg-address"
+  },
+  "bugs": "https://github.com/minnpost/minnpost-gettysburg-address/issues",
+  "license": "MIT",
+  "author": {
+    "name": "MinnPost",
+    "email": "data@minnpost.com"
+  },
+  "dependencies": {
+    "jquery": "~1.9",
+    "underscore": "~1.5.2",
+    "backbone": "~1.1.0",
+    "ractive": "~0.3.7",
+    "ractive-backbone": "~0.1.0",
+    "unsemantic": "*",
+    "Placeholders.js": "~3.0.1",
+    "requirejs": "~2.1.9",
+    "text": "~2.0.10"
+  }
+}
+
