@@ -2,6 +2,8 @@
 
 A fill in the blank version of the Gettysburg Address.
 
+![Lincoln at Gettysburg](http://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Lincolns_Gettysburg_Address%2C_Gettysburg.JPG/602px-Lincolns_Gettysburg_Address%2C_Gettysburg.JPG "Lincoln at Gettysburg")
+
 ## Data
 
 Gettysburg Address text taken from [abrahamlincolnonline.org](http://www.abrahamlincolnonline.org/lincoln/speeches/gettysburg.htm), cited source of *Collected Works of Abraham Lincoln*, edited by Roy P. Basler.
