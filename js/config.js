@@ -3,6 +3,7 @@
  * any non-compliant libraries.
  */
 require.config({
+  baseUrl: 'js',
   shim: {
     'underscore': {
       exports: '_'
@@ -10,9 +11,9 @@ require.config({
     'Backbone': {
       deps: ['underscore', 'jquery'],
       exports: 'Backbone'
-    }
+    },
+    'easydropdown': 'jquery'
   },
-  baseUrl: 'js',
   paths: {
     'requirejs': '../bower_components/requirejs/require',
     'text': '../bower_components/text/text',
