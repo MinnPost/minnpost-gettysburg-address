@@ -114,14 +114,21 @@ define('minnpost-gettysburg-address', ['underscore', 'store', 'helpers', 'router
 
   // Start function
   App.prototype.start = function() {
+    var answers;
+
+    // Remove the store feature the irresponsible way
+    this.store.enabled = false;
+
     // Match up words data with answer data
-    var answers = this.getStorage();
-    words = _.map(words, function(w) {
-      if (answers && answers[w.id]) {
-        w.answer = answers[w.id];
-      }
-      return w;
-    });
+    if (this.store.enabled) {
+      answers = this.getStorage();
+      words = _.map(words, function(w) {
+        if (answers && answers[w.id]) {
+          w.answer = answers[w.id];
+        }
+        return w;
+      });
+    }
 
     // Create router
     this.router = new routers.Router({
