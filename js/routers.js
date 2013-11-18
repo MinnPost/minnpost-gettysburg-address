@@ -20,6 +20,7 @@ define('routers', [
     data: {},
 
     initialize: function(options) {
+      var thisRouter = this;
       this.options = options;
       this.app = options.app;
 
@@ -27,8 +28,8 @@ define('routers', [
       // it much easier to refer to words by the Id
       this.data.words = {};
       _.each(options.words, function(w) {
-        this.data.words[w.id] = new models.Word(w);
-      }.bind(this));
+        thisRouter.data.words[w.id] = new models.Word(w);
+      });
 
       // Create application view
       this.views.application = new views.Application({

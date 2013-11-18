@@ -24,6 +24,6 @@
     "requirejs": "~2.1.9",
     "text": "~2.0.10",
     "store.js": "~1.3.14",
-    "easydropdown": "~2.1.3"
+    "easydropdown": "https://github.com/albertshaw/easydropdown.git#~2.1.0"
   }
 }

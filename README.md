@@ -62,4 +62,4 @@ Deploying will push the relevant files up to Amazon's AWS S3 so that they can be
 
 ## Hacks
 
-No hacks used (yet)
+* [Fix for EasyDropDown to work in IE8](https://github.com/patrickkunka/easydropdown/pull/19).

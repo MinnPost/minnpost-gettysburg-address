@@ -99,9 +99,14 @@ body .node-unpublished {
     }
   }
 
+  .word-wrapper,
+  .word,
   div.dropdown {
     @include inline-block();
-    top: .4em;
+  }
+
+  div.dropdown {
+    vertical-align: middle;
 
     ul {
       margin: 0;
