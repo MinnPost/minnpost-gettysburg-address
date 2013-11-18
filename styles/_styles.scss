@@ -79,21 +79,41 @@ body .node-unpublished {
     padding: 1em;
   }
 
+  .correctness-score {
+    display: none;
+  }
+
   .address-text {
     max-width: 34em;
     text-align: justify;
-    margin: 0 auto;
+    margin: 2em auto;
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 1.75em;
+    padding: 2em 0;
+    border-top: 1px solid $color-lighter-gray;
+    border-bottom: 1px solid $color-lighter-gray;
   }
 
   div.dropdown {
     @include inline-block();
+    top: .4em;
 
     ul {
       margin: 0;
       padding: 0;
     }
+
+    .focus {
+      background-color: $color-button-blue;
+    }
+  }
+
+  .graded.incorrect div.dropdown {
+    border: 1px solid red;
+  }
+
+  .graded.correct div.dropdown {
+    border: 1px solid green;
   }
 
   // Unsemantic "Mobile" breakpoint

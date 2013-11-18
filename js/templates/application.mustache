@@ -2,10 +2,6 @@
 
 <div class="content-container">
 
-  <div class="correctness">
-    {{ correctCount }} of {{ wordCount }} correct.
-  </div>
-
   <div class="address-text">
     <p>Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in <span class="word" id="liberty">{{#words.liberty}}{{>word}}{{/words.liberty}}</span>, and dedicated to the <span class="word" id="proposition">{{#words.proposition}}{{>word}}{{/words.proposition}}</span> that all men are created equal.</p>
 
@@ -14,6 +10,14 @@
     <p>But, in a larger sense, we can not dedicate &mdash; we can not <span class="word" id="consecrate">{{#words.consecrate}}{{>word}}{{/words.consecrate}}</span> &mdash; we can not hallow &mdash; this <span class="word" id="ground">{{#words.ground}}{{>word}}{{/words.ground}}</span>. The brave men, living and dead, who <span class="word" id="struggled">{{#words.struggled}}{{>word}}{{/words.struggled}}</span> here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the <span class="word" id="unfinished">{{#words.unfinished}}{{>word}}{{/words.unfinished}}</span> work which they who fought here have thus far so nobly <span class="word" id="advanced">{{#words.advanced}}{{>word}}{{/words.advanced}}</span>.</p>
 
     <p>It is rather for us to be here dedicated to the great <span class="word" id="task">{{#words.task}}{{>word}}{{/words.task}}</span> remaining before us &mdash; that from these honored dead we take increased <span class="word" id="devotion">{{#words.devotion}}{{>word}}{{/words.devotion}}</span> to that cause for which they gave the last full measure of devotion &mdash; that we here highly resolve that these dead shall not have died in vain &mdash; that this nation, under God, shall have a new birth of <span class="word" id="freedom">{{#words.freedom}}{{>word}}{{/words.freedom}}</span> &mdash; and that <span class="word" id="government">{{#words.government}}{{>word}}{{/words.government}}</span> of the people, by the people, for the people, shall not <span class="word" id="perish">{{#words.perish}}{{>word}}{{/words.perish}}</span> from the earth.</p>
+  </div>
+
+  <div class="correctness correctness-action">
+    <a href="#" on-tap="showCorrect">Show score</a>.
+  </div>
+
+  <div class="correctness correctness-score">
+    {{ correctCount }} of {{ wordCount }} correct.
   </div>
 
 </div>

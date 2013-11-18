@@ -55,6 +55,17 @@ define('views', ['jquery', 'underscore', 'Ractive', 'easydropdown', 'helpers'],
           thisView.set('words.' + $(this).data('wordId') + '.answer', selected.value);
         }
       });
+
+      // Show score event
+      this.on('showCorrect', function(e) {
+        e.original.preventDefault();
+        $(this.el).find('.correctness-action').slideUp();
+        $(this.el).find('.correctness-score').slideDown();
+
+        _.each(this.data.words, function(w) {
+          w.set('graded', true);
+        });
+      });
     }
   });
 
