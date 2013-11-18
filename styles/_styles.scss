@@ -108,17 +108,31 @@ body .node-unpublished {
       padding: 0;
     }
 
-    .focus {
+    ul li.focus {
       background-color: $color-button-blue;
+    }
+
+    .carat {
+      border-top-color: $color-light-gray;
+    }
+
+    &.open .carat {
+      border-bottom-color: $color-light-gray;
+      border-top-color: transparent;
     }
   }
 
   .graded.incorrect div.dropdown {
-    border: 1px solid red;
+    border: 1px solid $color-grade-red;
   }
 
   .graded.correct div.dropdown {
-    border: 1px solid green;
+    border: 1px solid $color-grade-green;
+  }
+
+  .graded .correct-answer {
+    color: #FFFFFF;
+    background-color: $color-grade-green;
   }
 
   // Unsemantic "Mobile" breakpoint

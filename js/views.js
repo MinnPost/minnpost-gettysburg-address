@@ -55,6 +55,17 @@ define('views', ['jquery', 'underscore', 'Ractive', 'easydropdown', 'helpers'],
           thisView.set('words.' + $(this).data('wordId') + '.answer', selected.value);
         }
       });
+      // We also have to hack around the fact that the option classes
+      // do not carry over
+      $(this.el).find('select option').each(function() {
+        $option = $(this);
+        $option.parent().parent().parent().find('ul li').each(function() {
+          $li = $(this);
+          if ($li.html() === $option.html()) {
+            $li.addClass($option.attr('class'));
+          }
+        });
+      });
 
       // Show score event
       this.on('showCorrect', function(e) {
