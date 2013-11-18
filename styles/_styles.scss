@@ -92,6 +92,11 @@ body .node-unpublished {
     padding: 2em 0;
     border-top: 1px solid $color-lighter-gray;
     border-bottom: 1px solid $color-lighter-gray;
+
+    p:first-child:first-letter {
+      text-transform: uppercase;
+      font-size: 2em;
+    }
   }
 
   div.dropdown {
